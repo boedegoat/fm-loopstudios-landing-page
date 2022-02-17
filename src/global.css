@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply max-w-md px-[30px] lg:max-w-6xl xl:px-0 mx-auto;
+  }
+}
+
+@layer utilities {
+  .bg-img-hero-mobile {
+    @apply bg-cover bg-center bg-no-repeat;
+    background-image: url(./images/mobile/image-hero.jpg);
+  }
+  .bg-img-hero-desktop {
+    @apply bg-cover bg-center bg-no-repeat;
+    background-image: url(./images/desktop/image-hero.jpg);
+  }
+}
+
+.hero-section {
+  @apply relative min-h-screen bg-img-hero-mobile md:bg-img-hero-desktop text-white;
+}
