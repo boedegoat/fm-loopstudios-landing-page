@@ -1,6 +1,6 @@
 export default function CreationsSection() {
   return (
-    <section className='wrapper text-center lg:text-left'>
+    <section className='wrapper text-center lg:text-left mb-32'>
       <div className='lg:flex lg:items-center lg:justify-between'>
         <h2 className='uppercase font-josefin text-3xl lg:text-4xl'>Our creations</h2>
         <a href='#' className='creation-see-all hidden lg:inline-block'>
