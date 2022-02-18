@@ -10,26 +10,38 @@ export default function Footer() {
           <img src={Logo} alt='loopstudios logo' className='w-36' />
           {/* links */}
           <div className='flex flex-col items-center space-y-4 mt-8 lg:space-x-4 lg:flex-row lg:space-y-0'>
-            <a href='#'>About</a>
-            <a href='#'>Careers</a>
-            <a href='#'>Events</a>
-            <a href='#'>Events</a>
-            <a href='#'>Products</a>
-            <a href='#'>Support</a>
+            <a href='#' className='nav-links'>
+              About
+            </a>
+            <a href='#' className='nav-links'>
+              Careers
+            </a>
+            <a href='#' className='nav-links'>
+              Events
+            </a>
+            <a href='#' className='nav-links'>
+              Events
+            </a>
+            <a href='#' className='nav-links'>
+              Products
+            </a>
+            <a href='#' className='nav-links'>
+              Support
+            </a>
           </div>
         </div>
         <div className='mt-10 lg:mt-0'>
           <div className='flex justify-center space-x-4 lg:justify-end'>
-            <a href='#'>
+            <a href='#' className='social-links'>
               <FaFacebookSquare size={25} />
             </a>
-            <a href='#'>
+            <a href='#' className='social-links'>
               <FaTwitter size={25} />
             </a>
-            <a href='#'>
+            <a href='#' className='social-links'>
               <FaPinterest size={25} />
             </a>
-            <a href='#'>
+            <a href='#' className='social-links'>
               <FaInstagram size={25} />
             </a>
           </div>

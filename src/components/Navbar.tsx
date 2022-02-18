@@ -63,12 +63,24 @@ function MobileMenu({ showMobileNav }: { showMobileNav: boolean }) {
 function NavbarLinks() {
   return (
     <>
-      <a href='#'>About</a>
-      <a href='#'>Careers</a>
-      <a href='#'>Events</a>
-      <a href='#'>Events</a>
-      <a href='#'>Products</a>
-      <a href='#'>Support</a>
+      <a href='#' className='nav-links'>
+        About
+      </a>
+      <a href='#' className='nav-links'>
+        Careers
+      </a>
+      <a href='#' className='nav-links'>
+        Events
+      </a>
+      <a href='#' className='nav-links'>
+        Events
+      </a>
+      <a href='#' className='nav-links'>
+        Products
+      </a>
+      <a href='#' className='nav-links'>
+        Support
+      </a>
     </>
   )
 }
