@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import useObserver from './hooks/useObserver'
 
 export default function App() {
-  const [heroSectionRef, heroSectionVisible] = useObserver({ threshold: 0.7 })
+  const [heroSectionRef, heroSectionVisible] = useObserver(true, { threshold: 0.7 })
   const changeNavStyle = !heroSectionVisible
 
   return (
