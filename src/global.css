@@ -20,5 +20,5 @@
 }
 
 .hero-section {
-  @apply relative min-h-screen bg-img-hero-mobile md:bg-img-hero-desktop text-white;
+  @apply relative h-[650px] bg-img-hero-mobile md:bg-img-hero-desktop text-white;
 }
