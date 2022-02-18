@@ -9,16 +9,105 @@
 }
 
 @layer utilities {
-  .bg-img-hero-mobile {
+  .bg-img-layout {
     @apply bg-cover bg-center bg-no-repeat;
+  }
+
+  .bg-img-hero-mobile {
+    @apply bg-img-layout;
     background-image: url(./images/mobile/image-hero.jpg);
   }
+
   .bg-img-hero-desktop {
-    @apply bg-cover bg-center bg-no-repeat;
+    @apply bg-img-layout;
     background-image: url(./images/desktop/image-hero.jpg);
+  }
+
+  .bg-img-deep-earth-desktop {
+    @apply bg-img-layout;
+    background-image: url(./images/desktop/image-deep-earth.jpg);
+  }
+  .bg-img-deep-earth-mobile {
+    @apply bg-img-layout;
+    background-image: url(./images/mobile/image-deep-earth.jpg);
+  }
+
+  .bg-img-night-arcade-desktop {
+    @apply bg-img-layout;
+    background-image: url(./images/desktop/image-night-arcade.jpg);
+  }
+  .bg-img-night-arcade-mobile {
+    @apply bg-img-layout;
+    background-image: url(./images/mobile/image-night-arcade.jpg);
+  }
+
+  .bg-img-soccer-team-desktop {
+    @apply bg-img-layout;
+    background-image: url(./images/desktop/image-soccer-team.jpg);
+  }
+  .bg-img-soccer-team-mobile {
+    @apply bg-img-layout;
+    background-image: url(./images/mobile/image-soccer-team.jpg);
+  }
+
+  .bg-img-grid-desktop {
+    @apply bg-img-layout;
+    background-image: url(./images/desktop/image-grid.jpg);
+  }
+  .bg-img-grid-mobile {
+    @apply bg-img-layout;
+    background-image: url(./images/mobile/image-grid.jpg);
+  }
+
+  .bg-img-from-above-desktop {
+    @apply bg-img-layout;
+    background-image: url(./images/desktop/image-from-above.jpg);
+  }
+  .bg-img-from-above-mobile {
+    @apply bg-img-layout;
+    background-image: url(./images/mobile/image-from-above.jpg);
+  }
+
+  .bg-img-pocket-borealis-desktop {
+    @apply bg-img-layout;
+    background-image: url(./images/desktop/image-pocket-borealis.jpg);
+  }
+  .bg-img-pocket-borealis-mobile {
+    @apply bg-img-layout;
+    background-image: url(./images/mobile/image-pocket-borealis.jpg);
+  }
+
+  .bg-img-curiosity-desktop {
+    @apply bg-img-layout;
+    background-image: url(./images/desktop/image-curiosity.jpg);
+  }
+  .bg-img-curiosity-mobile {
+    @apply bg-img-layout;
+    background-image: url(./images/mobile/image-curiosity.jpg);
+  }
+
+  .bg-img-fisheye-desktop {
+    @apply bg-img-layout;
+    background-image: url(./images/desktop/image-fisheye.jpg);
+  }
+  .bg-img-fisheye-mobile {
+    @apply bg-img-layout;
+    background-image: url(./images/mobile/image-fisheye.jpg);
   }
 }
 
 .hero-section {
   @apply relative h-[650px] bg-img-hero-mobile md:bg-img-hero-desktop text-white;
+}
+
+.creation-item {
+  @apply relative block text-left p-5 pt-10 font-josefin uppercase text-xl text-white
+  lg:flex-[20%] lg:h-[450px] lg:flex lg:flex-col
+  before:absolute before:inset-0 before:bg-gradient-to-r before:from-black before:to-transparent;
+}
+.creation-item p {
+  @apply relative lg:mt-auto lg:text-2xl;
+}
+.creation-see-all {
+  @apply uppercase border border-black px-10 py-2 tracking-[0.2em];
 }
