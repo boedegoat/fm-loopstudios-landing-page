@@ -1,39 +1,9 @@
-import Logo from '../images/logo.svg'
+import { Logo, IconClose, IconHamburger } from '../images'
 import useToggle from '../hooks/useToggle'
-
-function NavbarLinks() {
-  return (
-    <>
-      <a href='#'>About</a>
-      <a href='#'>Careers</a>
-      <a href='#'>Events</a>
-      <a href='#'>Events</a>
-      <a href='#'>Products</a>
-      <a href='#'>Support</a>
-    </>
-  )
-}
+import { cn } from '../lib'
 
 export default function Navbar() {
   const [showMobileNav, toggleMobileNav] = useToggle()
-
-  const MobileBtnIcon = showMobileNav ? (
-    // close icon
-    <svg width='20' height='20' xmlns='http://www.w3.org/2000/svg'>
-      <path
-        d='M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z'
-        fill='#FFF'
-        fill-rule='evenodd'
-      />
-    </svg>
-  ) : (
-    // open icon
-    <svg width='24' height='16' xmlns='http://www.w3.org/2000/svg'>
-      <g fill='#FFF' fill-rule='evenodd'>
-        <path d='M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z' />
-      </g>
-    </svg>
-  )
 
   return (
     <nav className='fixed z-20 top-0 left-0 w-full py-[50px]'>
@@ -48,18 +18,44 @@ export default function Navbar() {
 
         {/* mobile nav icon */}
         <button className='lg:hidden z-20' onClick={() => toggleMobileNav()}>
-          {MobileBtnIcon}
+          {showMobileNav ? (
+            <img src={IconClose} alt='close icon' />
+          ) : (
+            <img src={IconHamburger} alt='hamburger icon' />
+          )}
         </button>
       </div>
 
       {/* mobile menu goes here */}
-      {showMobileNav && (
-        <div className='fixed z-10 inset-0 bg-black text-white'>
-          <div className='wrapper flex flex-col absolute top-1/2 -translate-y-1/2 font-josefin uppercase text-xl space-y-4'>
-            <NavbarLinks />
-          </div>
-        </div>
-      )}
+      <MobileMenu showMobileNav={showMobileNav} />
     </nav>
+  )
+}
+
+function MobileMenu({ showMobileNav }: { showMobileNav: boolean }) {
+  return (
+    <div
+      className={cn(
+        'fixed z-10 inset-0 bg-black text-white transition-all duration-300 ease-in-out',
+        showMobileNav ? 'translate-x-0' : 'translate-x-full'
+      )}
+    >
+      <div className='wrapper flex flex-col absolute top-1/2 -translate-y-1/2 font-josefin uppercase text-xl space-y-4'>
+        <NavbarLinks />
+      </div>
+    </div>
+  )
+}
+
+function NavbarLinks() {
+  return (
+    <>
+      <a href='#'>About</a>
+      <a href='#'>Careers</a>
+      <a href='#'>Events</a>
+      <a href='#'>Events</a>
+      <a href='#'>Products</a>
+      <a href='#'>Support</a>
+    </>
   )
 }
