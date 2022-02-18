@@ -2,7 +2,7 @@ import { ImageInteractiveDesktop, ImageInteractiveMobile } from '../images'
 
 export default function SecondSection() {
   return (
-    <div className='relative wrapper py-[122px]'>
+    <section className='relative wrapper py-[122px]'>
       <img src={ImageInteractiveMobile} alt='image interactive' className='block lg:hidden' />
       <img src={ImageInteractiveDesktop} alt='image interactive' className='hidden lg:block' />
       <div className='text-center bg-white lg:absolute lg:bottom-14 lg:right-0 lg:max-w-xl lg:text-left lg:p-20'>
@@ -15,6 +15,6 @@ export default function SecondSection() {
           businesses through digital experiences that bind to their brand.
         </p>
       </div>
-    </div>
+    </section>
   )
 }
