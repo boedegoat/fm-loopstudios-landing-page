@@ -94,10 +94,14 @@
     @apply bg-img-layout;
     background-image: url(./images/mobile/image-fisheye.jpg);
   }
+
+  .shadow-bottom-white {
+    box-shadow: 0 20px 0 -11px white;
+  }
 }
 
-.nav-links:hover {
-  box-shadow: 0 20px 0 -11px white;
+.nav-links {
+  @apply hover:shadow-none lg:hover:shadow-bottom-white;
 }
 
 .hero-section {

@@ -14,9 +14,12 @@ export default function Navbar({ changeNavStyle }: { changeNavStyle: boolean }) 
   return (
     <nav
       className={cn(
-        'fixed z-20 top-0 left-0 w-full py-[50px] transition-all ease-out duration-300',
+        'fixed z-20 top-0 left-0 w-full py-[50px]',
         changeNavStyle ? 'bg-black py-[20px]' : 'bg-transparent'
       )}
+      style={{
+        transition: 'padding 0.3s ease-out, background-color 0.2s ease-out',
+      }}
     >
       <div className='wrapper flex items-center justify-between'>
         {/* logo here */}
