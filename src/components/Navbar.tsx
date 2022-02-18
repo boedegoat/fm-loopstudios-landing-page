@@ -1,12 +1,23 @@
 import { Logo, IconClose, IconHamburger } from '../images'
 import useToggle from '../hooks/useToggle'
 import { cn } from '../lib'
+import { useEffect } from 'react'
 
-export default function Navbar() {
+export default function Navbar({ changeNavStyle }: { changeNavStyle: boolean }) {
   const [showMobileNav, toggleMobileNav] = useToggle()
 
+  useEffect(() => {
+    if (showMobileNav) document.body.style.overflow = 'hidden'
+    else document.body.style.overflow = 'auto'
+  }, [showMobileNav])
+
   return (
-    <nav className='fixed z-20 top-0 left-0 w-full py-[50px]'>
+    <nav
+      className={cn(
+        'fixed z-20 top-0 left-0 w-full py-[50px] transition-all ease-out duration-300',
+        changeNavStyle ? 'bg-black py-[20px]' : 'bg-transparent'
+      )}
+    >
       <div className='wrapper flex items-center justify-between'>
         {/* logo here */}
         <img src={Logo} alt='loopstudios logo' className='z-20' />
@@ -36,12 +47,14 @@ function MobileMenu({ showMobileNav }: { showMobileNav: boolean }) {
   return (
     <div
       className={cn(
-        'fixed z-10 inset-0 bg-black text-white transition-all duration-300 ease-in-out',
+        'lg:hidden fixed z-10 inset-0 bg-black text-white transition-all duration-300 ease-in-out',
         showMobileNav ? 'translate-x-0' : 'translate-x-full'
       )}
     >
-      <div className='wrapper flex flex-col absolute top-1/2 -translate-y-1/2 font-josefin uppercase text-xl space-y-4'>
-        <NavbarLinks />
+      <div className='wrapper h-full'>
+        <div className='absolute top-1/2 -translate-y-1/2 flex flex-col font-josefin uppercase text-xl space-y-4'>
+          <NavbarLinks />
+        </div>
       </div>
     </div>
   )
