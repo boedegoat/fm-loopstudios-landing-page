@@ -109,7 +109,7 @@
 }
 
 .creation-item {
-  @apply relative block text-left p-5 pt-10 font-josefin uppercase text-xl text-white transition-colors ease-out duration-500
+  @apply relative block text-left p-5 pt-10 font-josefin uppercase text-xl text-white
   lg:flex-[20%] lg:h-[450px] lg:flex lg:flex-col
   before:absolute before:inset-0 before:bg-gradient-to-r before:from-black before:to-transparent before:transition-colors 
   before:duration-300 before:ease-out
