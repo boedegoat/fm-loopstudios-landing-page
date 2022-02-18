@@ -23,7 +23,9 @@ export default function Navbar({ changeNavStyle }: { changeNavStyle: boolean }) 
     >
       <div className='wrapper flex items-center justify-between'>
         {/* logo here */}
-        <img src={Logo} alt='loopstudios logo' className='z-20' />
+        <a href='#' className='z-20'>
+          <img src={Logo} alt='loopstudios logo' />
+        </a>
 
         {/* primary nav links */}
         <div className='hidden lg:flex space-x-10 text-white'>
